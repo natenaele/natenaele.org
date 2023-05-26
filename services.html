@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(11, 11, 10, 0.311);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-left: 170px;
+  width: 130px;
+  height: 50px;
+}
+
+nav ul.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 400px;
+}
+
+nav ul.menu li {
+  margin-right: 20px;
+}
+
+nav ul.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul.menu li a:hover {
+  color: black;
+  background-color: gold;
+}
+
+nav ul.menu li a.active {
+  font-weight: bold;
+}
+
+#services {
+  padding: 80px 0;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#services h2 {
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.service-item {
+  flex-basis: 100%;
+  max-width: 300px;
+  background-image: url(images/Gold.jpg);
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.service-item a {
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.service-item a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #fff;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links a {
+  color: #9e9595;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+footer p {
+  color: #fff;
+}
+
+.footer-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00ffff;
+}
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  margin-left: 37%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-content {
+  background-color: #000;
+  padding: 20px;
+  max-width: 400px;
+  max-height: 900px;
+  border-radius: 8px;
+  color: #fff;
+}
+#popup-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#popup-content p {
+  margin-bottom: 20px;
+}
+
+#popup-content label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#popup-content input[type="text"],
+#popup-content input[type="email"],
+#popup-content input[type="tel"],
+#popup-content textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  color: #000;
+  background-color: #fff;
+}
+
+#popup-content textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+#popup-content button[type="submit"] {
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#popup-content button[type="submit"]:hover {
+  background-color: #DAA520;
+}
+
+#close-popup {
+  margin-top: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#close-popup:hover {
+  background-color: #555;
+}
+
+nav .fa {
+      display: none;
+    }
+    
+    /* Responsive Styles */
+    
+    @media screen and (max-width: 700px) {
+      .container .menu {
+        display: block;
+        position: absolute;
+        height: 100vh;
+        background-color: rgba(11, 11, 10, 0.826);
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+      }
+      .container .menu li {
+        margin-top: 35px;
+      }
+      .container .menu li a {
+        background: none;
+      }
+      .container .menu li a:hover {
+        background: none;
+        color: gold;
+      }
+      nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .service-item a{
+       font-size: 18px;
+      }
+      #popup{
+        margin: 0 auto;
+      }
+      
+    }
+  </style>
+</head>
+<body background="images/Bs1.jpg">
+  <nav>
+    <a href="home.html"><img src="images/android.jpg" alt="Android Logo" class="logo"></a>
+    <div class="container">
+      <ul class="menu" id="Menu">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="services.html">My Services</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="portfolio.html">My Portfolio</a></li>
+      </ul>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </div>
+  </nav>
+    <section id="services">
+        <div class="service-container">
+            <h2>My Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="images/Android_App_Development.png" alt="Mobile App Development">
+                    <h3>Android App Development</h3>
+                    <p>I specialize in developing high-quality mobile apps for Android devices. I bring your app ideas to life, from concept to deployment.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Front_end_Web_Development.jpg" alt="Web Application Development">
+                    <h3>Front-end Web Development</h3>
+                    <p>I create web applications that are accessible within web browsers, providing seamless experiences across different platforms.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/User_Interface_UI_Design.jpg" alt="User Interface Design">
+                    <h3>User Interface/UI Design</h3>
+                    <p>I design user interfaces for both mobile apps and web applications, ensuring intuitive and visually appealing experiences for your users.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Coding_Languages.jpg" alt="Coding Languages">
+                    <h3>Coding Languages</h3>
+                    <p>I write code in Java, Kotlin, HTML, CSS, and JavaScript, ensuring the development of robust and dynamic applications.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Programming_Education.jpg" alt="Programming Education">
+                    <h3>Programming Education</h3>
+                    <p>I offer programming education and training to individuals and groups, helping them develop valuable coding skills.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Application_Deployment.png" alt="Application Deployment">
+                    <h3>Application Deployment</h3>
+                    <p>I handle the deployment of applications to production environments, ensuring a smooth and successful launch.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>   
+                <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Maintenance.png" alt="App Maintenance">
+                      <h3>App Maintenance</h3>
+                      <p>I provide app maintenance services to help businesses and individuals keep their existing apps up-to-date and functioning smoothly.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Testing.png" alt="App Testing">
+                      <h3>App Testing</h3>
+                      <p>I offer app testing services to ensure that your apps are free of bugs and errors, providing a seamless user experience.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Marketing.png" alt="App Marketing">
+                      <h3>App Marketing</h3>
+                      <p>I provide app marketing services to help businesses and individuals promote their apps and increase their user base.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Consulting.png" alt="App Consulting">
+                      <h3>App Consulting</h3>
+                      <p>I offer app consulting services, providing expert advice and guidance on app development strategies and best practices.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Full-service Development.jpg" alt="Full-service Development">
+                      <h3>Full-service Development</h3>
+                      <p>I provide full-service app development solutions, taking care of all aspects from design and coding to testing and deployment.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Part-time Development.png" alt="Part-time Development">
+                      <h3>Part-time Development</h3>
+                      <p>I offer part-time app development services, working with businesses and individuals on a flexible basis to develop their apps.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Hourly Rates.jpg" alt="Hourly Rates">
+                      <h3>Hourly Rates</h3>
+                      <p>I charge hourly rates for my app development services, ensuring transparency and flexibility for my clients.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Fixed-price Projects.jpg" alt="Fixed-price Projects">
+                      <h3>Fixed-price Projects</h3>
+                      <p>I offer fixed-price projects for app development, providing a clear budget and scope for the development process.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+      <div id="popup">
+        <div id="popup-content">
+          <h2>Let's Get Started!</h2>
+          <p>I'm excited to help bring your vision to life! Please take a moment to share some key
+            details about your project or requirements. The more information you provide, the better I can tailor my services to
+            meet your needs. Don't hold back - be as detailed as you'd like! Let's create something amazing together.</p>
+          <form action="https://formsubmit.co/natenaele.dev@gmail.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <input type="hidden" name="_subject" value="New Submission for services on my Web!">
+            <input type="hidden" name="_next" value="https://natenaele.org/servicesThanks.html">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+          
+            <label for="tel">Phone:</label>
+            <input type="tel" name="phone" id="phone" required><br>
+          
+            <label for="project-details">Project Details:</label>
+            <textarea id="project-details" name="project-details" rows="4" required></textarea><br>
+          
+            <button type="submit">Submit</button>
+          </form>
+          <button id="close-popup">Close</button>
+        </div>
+      </div>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2023 <span class="footer-name">Natenaele Tibebu</span>. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>  
+    <script>
+      var navLinks = document.getElementById("Menu");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+      function showPopup() {
+          var popup = document.getElementById("popup");
+          popup.style.display = "block";
+        }
+
+        function closePopup() {
+          var popup = document.getElementById("popup");
+          popup.style.display = "none";
+        }
+        document.getElementById("close-popup").addEventListener("click", closePopup);
+        var popup = document.getElementById('popup');
+          var learnMoreButtons = document.getElementsByClassName("book");
+
+          document.addEventListener('click', function (event) {
+            var isInsidePopup = popup.contains(event.target);
+            var isLearnMoreButton = false;
+
+            for (var i = 0; i < learnMoreButtons.length; i++) {
+              if (learnMoreButtons[i].contains(event.target)) {
+                isLearnMoreButton = true;
+                break;
+              }
+            }
+
+            if (!isInsidePopup && !isLearnMoreButton) {
+              popup.style.display = 'none';
+            }
+          });
+    </script>
+</body>
+</html>

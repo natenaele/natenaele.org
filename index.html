@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Natenaele Home</title>
+</head>
+<body>
+    <div id="video-container"></div>
+    <video id="video-background" autoplay loop muted>
+        <source src="video/space_ship.mp4" type="video/mp4">
+        <!-- Include additional source elements for different video formats if needed -->
+      </video>
+    </div>
+    <header>
+        <nav>
+            <div class="container">
+                <img src="images/android.jpg" alt="Android Logo" class="logo">
+                <ul class="menu" id="Menu">
+                  <i class="fa fa-times" onclick="hideMenu()"></i>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="services.html">My Services</a></li>
+                  <li><a href="contact.html">Contact Me</a></li>
+                  <li><a href="portfolio.html">My Portfolio</a></li>
+                </ul>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <h2>Unlock the Power of Android and Transform Your Ideas into Reality</h2>
+            <p>I'm here to take your digital experiences to new heights. As a seasoned Android developer and front-end web guru, I bring the best of both worlds to the table.<br> <br>
+
+With my Android expertise, I'll transform your app ideas into reality. From sleek user interfaces to robust functionalities, your app will shine in the Google Play Store.
+
+But wait, there's more! As a front-end web developer, I'll craft stunning websites that captivate your audience. From responsive designs to seamless interactions, your online presence will leave a lasting impression.<br><br>
+
+Join forces with me, and let's embark on a journey of innovation and creativity. Together, we'll conquer the realms of Android and web development, turning your visions into digital masterpieces.<br>
+
+Unlock the power of Android and web development brilliance. Get ready to make waves in the digital world. Let's get started!</p>
+            <a href="#services" class="btn">Explore My Services</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/itan.jpg" alt="Profile Picture" class="profile-image">
+                <h3>Natenaele Tibebu</h3>
+                <p class="about-paragraph">I am a passionate and dedicated Android and front-end web developer with a strong focus on creating elegant and user-friendly applications. With several years of experience in the field, I have honed my skills in developing high-quality mobile apps and visually appealing websites that meet the unique needs of clients.</p>
+                <p class="about-paragraph">My journey as a developer began during my college years when I realized my deep interest in mobile and web technologies. Since then, I have worked on numerous projects, collaborating with clients from diverse industries and delivering exceptional results.</p>
+                <p class="about-paragraph">My expertise extends to various Android development frameworks and technologies, including Java, Kotlin, and Android Studio. Additionally, I have a strong command of front-end web technologies such as HTML5, CSS3, and JavaScript, allowing me to create seamless and engaging user experiences across different platforms.</p>
+                <p class="about-paragraph">When I'm not coding, you can find me exploring new coffee shops, experimenting with the latest web design trends, or attending technology conferences to expand my knowledge and network with fellow developers. I am committed to continuous learning and staying up-to-date with the latest industry practices to deliver cutting-edge solutions.</p>
+                <p class="about-paragraph">I am excited to collaborate with you to bring your app and web ideas to life. Let's create something amazing together!</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="service-container">
+            <h2>My Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="images/Android_App_Development.png" alt="Mobile App Development">
+                    <h3>Android App Development</h3>
+                    <p>I specialize in developing high-quality mobile apps for Android devices. I bring your app ideas to life, from concept to deployment.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Front_end_Web_Development.jpg" alt="Web Application Development">
+                    <h3>Front-end Web Development</h3>
+                    <p>I create web applications that are accessible within web browsers, providing seamless experiences across different platforms.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/User_Interface_UI_Design.jpg" alt="User Interface Design">
+                    <h3>User Interface/UI Design</h3>
+                    <p>I design user interfaces for both mobile apps and web applications, ensuring intuitive and visually appealing experiences for your users.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Coding_Languages.jpg" alt="Coding Languages">
+                    <h3>Coding Languages</h3>
+                    <p>I write code in Java, Kotlin, HTML, CSS, and JavaScript, ensuring the development of robust and dynamic applications.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Programming_Education.jpg" alt="Programming Education">
+                    <h3>Programming Education</h3>
+                    <p>I offer programming education and training to individuals and groups, helping them develop valuable coding skills.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/Application_Deployment.png" alt="Application Deployment">
+                    <h3>Application Deployment</h3>
+                    <p>I handle the deployment of applications to production environments, ensuring a smooth and successful launch.</p>
+                    <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                </div>   
+                <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Maintenance.png" alt="App Maintenance">
+                      <h3>App Maintenance</h3>
+                      <p>I provide app maintenance services to help businesses and individuals keep their existing apps up-to-date and functioning smoothly.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Testing.png" alt="App Testing">
+                      <h3>App Testing</h3>
+                      <p>I offer app testing services to ensure that your apps are free of bugs and errors, providing a seamless user experience.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Marketing.png" alt="App Marketing">
+                      <h3>App Marketing</h3>
+                      <p>I provide app marketing services to help businesses and individuals promote their apps and increase their user base.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/App Consulting.png" alt="App Consulting">
+                      <h3>App Consulting</h3>
+                      <p>I offer app consulting services, providing expert advice and guidance on app development strategies and best practices.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Full-service Development.jpg" alt="Full-service Development">
+                      <h3>Full-service Development</h3>
+                      <p>I provide full-service app development solutions, taking care of all aspects from design and coding to testing and deployment.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Part-time Development.png" alt="Part-time Development">
+                      <h3>Part-time Development</h3>
+                      <p>I offer part-time app development services, working with businesses and individuals on a flexible basis to develop their apps.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Hourly Rates.jpg" alt="Hourly Rates">
+                      <h3>Hourly Rates</h3>
+                      <p>I charge hourly rates for my app development services, ensuring transparency and flexibility for my clients.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+              <div class="service-item">
+                  <div class="service-card">
+                      <img src="images/Fixed-price Projects.jpg" alt="Fixed-price Projects">
+                      <h3>Fixed-price Projects</h3>
+                      <p>I offer fixed-price projects for app development, providing a clear budget and scope for the development process.</p>
+                      <a href="#popup" class="book" onclick="showPopup()">Book Service</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <div id="popup">
+      <div id="popup-content">
+        <h2>Let's Get Started!</h2>
+        <p>I'm excited to help bring your vision to life! Please take a moment to share some key
+          details about your project or requirements. The more information you provide, the better I can tailor my services
+          to
+          meet your needs. Don't hold back - be as detailed as you'd like! Let's create something amazing together.</p>
+        <form action="https://formsubmit.co/natenaele.dev@gmail.com" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br>
+          <input type="hidden" name="_subject" value="New Submission for services on my Web!">
+          <input type="hidden" name="_next" value="https://natenaele.org/servicesThanks.html">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+    
+          <label for="tel">Phone:</label>
+          <input type="tel" name="phone" id="phone" required><br>
+    
+          <label for="project-details">Project Details:</label>
+          <textarea id="project-details" name="project-details" rows="4" required></textarea><br>
+    
+          <button type="submit">Submit</button>
+        </form>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
+    <section id="contact">
+        <div class="contact-container">
+          <h2>Contact Me</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Contact Information</h3>
+              <p><strong>Email 1:</strong> natenaele.dev@gmail.com</p>
+              <p><strong>Email 2:</strong> business4natenaele@gmail.com</p>
+              <p><strong>Email 3:</strong> business4nati@gmail.com</p>
+              <p><strong>Email 4:</strong> inform4natenaele@gmail.com</p>
+              <p><strong>Phone 1:</strong> +971521373241</p>
+              <p><strong>Phone 2:</strong> +971521373241</p>
+              <div class="social-media">
+                <h3>Contact Me by:</h3>
+                <ul class="social-links">
+                  <li><a href="https://www.facebook.com/profile.php?id=100093239101066" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
+                  <li><a href="https://www.tiktok.com/@tech_nati" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a></li>
+                  <li><a href="https://www.instagram.com/natenaele.dev" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCjCa7ejjO8ZtBWPcKQf6jnA" target="_blank"><img src="images/youtube.png" alt="YouTube"></a></li>
+                  <li><a href="https://wa.me/+971521373241"><img src="images/whatsapp.png" alt="WhatsApp"></a></li>
+                  <li><a href="https://t.me/natenaele_dev"><img src="images/telegram.png" alt="Telegram"></a></li>
+                  <li><a href="tel:+971521373241"><img src="images/phone.png" alt="Phone"></a></li>
+                  <li><a href="https://www.upwork.com/workwith/natenaelet2" target="_blank"><img src="images/upwork.png" alt="Upwork"></a></li>
+                  <li><a href="https://www.linkedin.com/in/natenaele-tibebu-3a16b0278/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3>Send Me a Message</h3>
+              <form action="https://formsubmit.co/natenaele.dev@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Submission for contact on my Web!">
+                <input type="hidden" name="_next" value="https://natenaele.org/contactThanks.html">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" id="phone" placeholder="Your Phone Number">
+                <textarea name="message" rows="4" id="message" placeholder="How can I help you?" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <p>&copy; 2023 <span class="footer-name">Natenaele Tibebu</span>. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </footer> 
+      <script>
+        var navLinks = document.getElementById("Menu");
+
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+        function showPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+          }
+
+          function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+          }
+          document.getElementById("close-popup").addEventListener("click", closePopup);
+          var popup = document.getElementById('popup');
+            var learnMoreButtons = document.getElementsByClassName("book");
+
+            document.addEventListener('click', function (event) {
+              var isInsidePopup = popup.contains(event.target);
+              var isLearnMoreButton = false;
+
+              for (var i = 0; i < learnMoreButtons.length; i++) {
+                if (learnMoreButtons[i].contains(event.target)) {
+                  isLearnMoreButton = true;
+                  break;
+                }
+              }
+
+              if (!isInsidePopup && !isLearnMoreButton) {
+                popup.style.display = 'none';
+              }
+            });
+
+      </script>
+
+</body>
+</html>
