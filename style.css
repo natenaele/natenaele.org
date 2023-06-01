@@ -608,6 +608,9 @@ footer .container {
   * {
     box-sizing: border-box;
   }
+  body{
+  background: black;
+  }
 
   .container .menu {
     display: block;
